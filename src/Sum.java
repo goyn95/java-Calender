@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// ctrl shift m <<자동 import
 public class Sum {
 
 	public static void main(String[] args) {
@@ -7,11 +8,12 @@ public class Sum {
 		System.out.println("숫자 2개를 입력하세요. : ");
 		Scanner scan = new Scanner(System.in);
 		String inputValue = scan.nextLine();
-		String[] splitValue = inputValue.split(",");
+		String[] splitValue = inputValue.split(",1,2");
 		int firstValue = Integer.parseInt(splitValue[0]);
 		int secondValue = Integer.parseInt(splitValue[1]);
 		
 		System.out.println(firstValue + secondValue);
+		scan.close();
 	}
 
 }

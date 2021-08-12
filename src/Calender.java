@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class Calender {
+	
+	private static final int[] MAX_DAYS = {31, 28, 31, 30,31,30,31,31,30,31,30, 31};
+	
+	public int getMaxDaysOfMonth(int month) {
+		return MAX_DAYS[month - 1];
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("일  월  화  수  목  금 토");
 		System.out.println("--------------------");
@@ -12,11 +19,11 @@ public class Calender {
 		// 숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
 		System.out.println("알고 싶은 달을 입력하세요.: ");
 		Scanner scan = new Scanner(System.in);
-		int inputValue = scan.nextInt();
+		int month = scan.nextInt();
+		Calender cal = new Calender();
 		
-		int[] maxDay = {31, 28, 31, 30,31,30,31,31,30,31,30, 31};
+		System.out.printf("d월은 %d일까지 있습니다.", month, cal.getMaxDaysOfMonth(month));
 		
-		System.out.printf("%d일은 %d일까지 있습니다.\n", inputValue, maxDay[inputValue - 1]);
 		scan.close();
 		
 //		if(inputValue == 1 || inputValue == 3|| inputValue == 5 || inputValue == 7 || inputValue == 8|| inputValue == 10 || inputValue == 12) {

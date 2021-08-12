@@ -27,15 +27,14 @@ public class Calender2 {
 		for (int i= 0; i < repeat; i++) {
 			System.out.println("달을 입력하세요.");
 			int month = scan.nextInt();
-			System.out.printf("%d달은 %d입니다.\n", month, cal.getMaxDaysOfMonth(month));
+			if(month <=0) {
+				System.out.println("Have a nice day!");
+			}else {
+				System.out.printf("%d달은 %d입니다.\n", month, cal.getMaxDaysOfMonth(month));
+			}
 		}
 		System.out.println("Bye~");
 		scan.close();
-		
-		
-		
-		
-
 	}
 
 }

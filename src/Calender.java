@@ -14,13 +14,18 @@ public class Calender {
 		Scanner scan = new Scanner(System.in);
 		int inputValue = scan.nextInt();
 		
-		if(inputValue == 1 || inputValue == 3|| inputValue == 5 || inputValue == 7 || inputValue == 8|| inputValue == 10 || inputValue == 12) {
-			System.out.println(31);
-		}else if(inputValue == 2) {
-			System.out.println(28);
-		}else {
-			System.out.println(30);
-		}
+		int[] maxDay = {31, 28, 31, 30,31,30,31,31,30,31,30, 31};
+		
+		System.out.printf("%d일은 %d일까지 있습니다.\n", inputValue, maxDay[inputValue - 1]);
+		scan.close();
+		
+//		if(inputValue == 1 || inputValue == 3|| inputValue == 5 || inputValue == 7 || inputValue == 8|| inputValue == 10 || inputValue == 12) {
+//			System.out.println(31);
+//		}else if(inputValue == 2) {
+//			System.out.println(28);
+//		}else {
+//			System.out.println(30);
+//		}
 	}
 
 }

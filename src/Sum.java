@@ -14,6 +14,7 @@ public class Sum {
 		
 		System.out.println(firstValue + secondValue);
 		scan.close();
+		//z
 	}
 
 }
